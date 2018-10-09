@@ -40,8 +40,8 @@ From: nvidia/cuda:9.0-cudnn7-runtime-ubuntu16.04
         rsync \
         software-properties-common \
         unzip \
+        git \
         wget \
-        sudo \
         && \
    apt-get clean && \
    rm -rf /var/lib/apt/lists/*
@@ -66,7 +66,7 @@ From: nvidia/cuda:9.0-cudnn7-runtime-ubuntu16.04
    pip install http://download.pytorch.org/whl/cu90/torch-0.4.0-cp27-cp27mu-linux_x86_64.whl
    pip install torchvision 
 
-    mkdir /opt/rl-setup && cd /opt/rl-setup
+   mkdir /opt/rl-setup && cd /opt/rl-setup
    git clone https://github.com/openai/gym.git
    cd gym
    pip install -e .
